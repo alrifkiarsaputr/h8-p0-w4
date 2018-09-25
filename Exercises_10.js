@@ -1,42 +1,25 @@
-function checkAB(str){
-
-  var a=str.indexOf('a')
-  var b=str.indexOf('b')
-  var a1=str.lastIndexOf('a')
-  var b1=str.lastIndexOf('b')
-  var jarak=0
-
-
-// return 
-  if(a>b){
-    jarak=a-b
+function checkAB(num) {
+  // you can only write your code here!
+  var arr=num.split(''),arr2=[];
+  return arr
+  for(var i=0;i<arr.length;i++){
+      if(arr[i]!==' '){
+          arr2.push(arr[i]);
+      }
   }
-  else if(a<b){
-    jarak=b-a
+  for(var a=0;a<arr2.length;a++){
+      if(arr2[a]==='a'){
+          for(var b=a;b<=(a+3);b++){
+              if(arr2[b]==='b'){
+                  return true
+              }
+          }
+      }
   }
-
-  if(jarak===4){
-    return true
-  }
-  else{
-    return false
-  }
-
-  if(a1>b1){
-    jarak=a1-b1
-  }
-  else if(a1<b1){
-    jarak=b1-a1
-  }
-  if(jarak===4){
-    return true
-  }
-  else{
-    return false
-  }
-
+  return false;
 }
 
+// TEST CASES
 console.log(checkAB('lane borrowed')); // true
 console.log(checkAB('i am sick')); // false
 console.log(checkAB('you are boring')); // true
