@@ -1,7 +1,7 @@
 function checkAB(num) {
   // you can only write your code here!
   var arr=num.split(''),arr2=[];
-  return arr
+//   return arr
   for(var i=0;i<arr.length;i++){
       if(arr[i]!==' '){
           arr2.push(arr[i]);
